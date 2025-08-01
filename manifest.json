@@ -6,7 +6,7 @@
   "permissions": ["storage", "scripting", "activeTab"],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "cursor.png"
+    "default_icon": "icon.png"
   },
   "background": {
     "service_worker": "background.js"
@@ -18,6 +18,13 @@
       "css": ["style.css"]
     }
   ],
+  "web_accesible_resources": [
+    {
+      "resources": ["cursor.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  
   "icons": {
     "128": "cursor.png"
 }
