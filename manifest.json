@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "A Normal Cursor",
+  "name": "Chaotic Cursor",
   "version": "1.0",
-  "description": "Just a normal cursor. But with attitude.",
-  "permissions": ["storage", "scripting", "activeTab"],
+  "description": "A chaotic, customizable cursor that reacts to how you behave online.",
+  "permissions": ["storage", "activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
@@ -15,17 +15,10 @@
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
-      "css": ["style.css"]
+      "css": ["styles.css"]
     }
   ],
-  "web_accesible_resources": [
-    {
-      "resources": ["cursor.png"],
-      "matches": ["<all_urls>"]
-    }
-  ],
-  
   "icons": {
-    "128": "cursor.png"
-}
+    "48": "icon.png"
+  }
 }
