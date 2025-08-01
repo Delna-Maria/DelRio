@@ -39,19 +39,6 @@ h1 {
   text-align: center;
 }
 
-label {
-  font-size: 14px;
-}
-
-select {
-  padding: 6px;
-  border-radius: 5px;
-  border: 1px solid #d9cfc2;
-  background-color: #fffaf3;
-  color: #5a4a3f;
-  font-size: 13px;
-}
-
 .toggle {
   position: relative;
   display: flex;
