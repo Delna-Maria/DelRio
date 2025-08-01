@@ -1,7 +1,7 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# A NORMAL CURSOR
 
 
 ## Basic Details
@@ -22,36 +22,25 @@ Boring cursor
 A cursor with an attitude.
 
 ## Technical Details
-### Technologies/Components Used
+
 - Languages: Javascript,CSS,html,Json
 - Tools: VS code, chrome DevTools, GitHub, Git, Chrome extention manager
+
 
 
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
 
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+### Project Demo and Screenshots
+![Media](https://drive.google.com/drive/u/0/folders/1yVLhUqr09j4bxdJj7xfxIfYFaAN7WkJL)
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Delna: handled core functionality using javascript and event based logic of the extension.
+- Diya: designed and implemented html, css and json configurations.
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
