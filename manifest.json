@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Chaotic Cursor",
+  "name": "A Normal Cursor",
   "version": "1.0",
-  "description": "A chaotic, customizable cursor that reacts to how you behave online.",
+  "description": "Just a normal cursor. But with attitude.",
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
