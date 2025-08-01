@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Chaotic Cursor",
+  "version": "1.0",
+  "description": "Cursor with attitude. Reacts to your chaos in real-time.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "cursor.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": {
+    "128": "cursor.png"
+}
+}

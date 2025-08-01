@@ -1,0 +1,18 @@
+* {
+  cursor: url("cursor.png"), auto !important;
+}
+
+.floating-dialogue {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  opacity: 0.9;
+  z-index: 999999;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
