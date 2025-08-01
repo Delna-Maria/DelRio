@@ -52,15 +52,20 @@ function setupScrollDetector() {
   let scrollCount = 0;
   let lastScroll = 0;
 
-  window.addEventListener("wheel", () => {
+  window.addEventListener("wheel", (e) => {
     const now = Date.now();
-    if (now - lastScroll < 100) {
+    const delta = Math.abs(e.deltaY);  // measures scroll strength
+
+    if (delta > 50 && now - lastScroll < 100) {
       scrollCount++;
-      if (scrollCount > 8) {
+      if (scrollCount > 5) {
         showFloatingDialogue(getRandomMessage("scroll"));
         scrollCount = 0;
       }
-    } else scrollCount = 0;
+    } else {
+      scrollCount = 0;
+    }
+
     lastScroll = now;
   });
 }
@@ -90,7 +95,7 @@ function setupMoveDetector() {
     const dy = Math.abs(e.clientY - lastY);
     const distance = Math.sqrt(dx * dx + dy * dy);
 
-    if (distance > 80) {
+    if (distance > 100) {
       moveBurst++;
       if (moveBurst > 12) {
         showFloatingDialogue(getRandomMessage("move"));
