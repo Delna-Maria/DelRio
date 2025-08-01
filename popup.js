@@ -1,19 +1,8 @@
-const toggleBtn = document.getElementById('toggle');
-const colorPicker = document.getElementById('color');
+document.getElementById("saveBtn").addEventListener("click", () => {
+  const color = document.getElementById("cursorColor").value;
+  const trail = document.getElementById("trailToggle").checked;
 
-chrome.storage.sync.get(["enabled", "theme"], (data) => {
-  toggleBtn.textContent = data.enabled ? "Disable" : "Enable";
-  colorPicker.value = data.theme || "red";
-});
-
-toggleBtn.onclick = () => {
-  chrome.storage.sync.get(["enabled"], (data) => {
-    const newState = !data.enabled;
-    chrome.storage.sync.set({ enabled: newState });
-    toggleBtn.textContent = newState ? "Disable" : "Enable";
+  chrome.storage.sync.set({ color, trail }, () => {
+    alert("Theme saved!");
   });
-};
-
-colorPicker.onchange = () => {
-  chrome.storage.sync.set({ theme: colorPicker.value });
-};
+});
