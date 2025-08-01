@@ -56,7 +56,7 @@ function setupScrollDetector() {
     const now = Date.now();
     if (now - lastScroll < 100) {
       scrollCount++;
-      if (scrollCount > 12) {
+      if (scrollCount > 8) {
         showFloatingDialogue(getRandomMessage("scroll"));
         scrollCount = 0;
       }
@@ -90,7 +90,7 @@ function setupMoveDetector() {
     const dy = Math.abs(e.clientY - lastY);
     const distance = Math.sqrt(dx * dx + dy * dy);
 
-    if (distance > 90) {
+    if (distance > 80) {
       moveBurst++;
       if (moveBurst > 12) {
         showFloatingDialogue(getRandomMessage("move"));
