@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css" />
+  <title>A Normal Cursor</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h2>A Normal Cursor</h2>
-  <label>
-    Cursor Color:
-    <input type="color" id="cursorColor" />
-  </label><br />
-  <label>
-    Trail:
-    <input type="checkbox" id="trailToggle" />
-  </label><br />
-  <button id="saveBtn">Save</button>
+  <div class="container">
+    <h1>A Normal Cursor</h1>
+
+    <label class="toggle">
+      <input type="checkbox" id="toggleChaos" />
+      <span class="slider"></span>
+      <span class="label-text">Enable Chaos</span>
+    </label>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
