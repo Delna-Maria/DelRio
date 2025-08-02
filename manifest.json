@@ -4,6 +4,12 @@
   "version": "1.0",
   "description": "Just a normal cursor. But with attitude.",
   "permissions": ["storage", "activeTab", "scripting"],
+  "web_accessible_resources": [
+    {
+      "resources": ["dialogues.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.jpg"
