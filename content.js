@@ -86,8 +86,8 @@ function setupMoveDetector() {
   let moveBurst = 0;
 
   document.addEventListener("mousemove", (e) => {
-const distanceThreshold = 120; // Ignore small wobbles
-const movementBurstLimit = 12; // Require several fast motions
+  const distanceThreshold = 200; // Ignore small wobbles
+const movementBurstLimit = 20; // Require several fast motions
 
 if (distance > distanceThreshold) {
   moveBurst++;
