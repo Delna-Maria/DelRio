@@ -27,15 +27,23 @@ A cursor with an attitude.
 - Tools: VS code, chrome DevTools, GitHub, Git, Chrome extention manager
 
 
-
-### Project Documentation
-For Software:
-
-
-
-
 ### Project Demo and Screenshots
 ![Media](https://drive.google.com/drive/u/0/folders/1yVLhUqr09j4bxdJj7xfxIfYFaAN7WkJL)
+
+
+### Installation Instructions
+- Click on the arrow next to code and download zip
+- Extract it from your files
+- Turn on chrome
+- Go to chrome://extensions
+- Enable Developer Mode
+- Click Load unpacked
+- Enable the extension
+
+Now youre good to go!
+
+Ps: the extension doesnt work on certain websites due to security reason, but to try to it out you can check it out on youtube or google drive.
+
 
 
 ## Team Contributions
