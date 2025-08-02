@@ -42,7 +42,7 @@ A cursor with an attitude.
 
 Now youre good to go!
 
-Ps: the extension doesnt work on certain websites due to security reason, but to try to it out you can check it out on youtube or google drive.
+Ps: the extension doesnt work on certain websites due to security reason, but to try to it out you can check it out on youtube, whatsapp web or google drive.
 
 
 
