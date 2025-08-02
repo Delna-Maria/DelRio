@@ -28,7 +28,8 @@ A cursor with an attitude.
 
 
 ### Project Demo and Screenshots
-![Media](https://drive.google.com/drive/u/0/folders/1yVLhUqr09j4bxdJj7xfxIfYFaAN7WkJL)
+[Click here to view the media on Google Drive](https://drive.google.com/drive/u/0/folders/1yVLhuqr09j4bxdJj7xfxiFYFaAN7WkJL)
+
 
 
 ### Installation Instructions
