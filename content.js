@@ -1,3 +1,12 @@
+let lastX = 0;
+let lastY = 0;
+let moveBurst = 0;
+let lastMoveTime = Date.now();
+const distanceThreshold = 200;         // Minimum distance for it to count
+const movementBurstLimit = 6;          // How many wild moves before reaction
+const movementCooldown = 1000;         // 1 second cooldown
+
+
 let messages = {};
 let idleTimer;
 
@@ -86,19 +95,30 @@ function setupMoveDetector() {
   let moveBurst = 0;
 
   document.addEventListener("mousemove", (e) => {
-  const distanceThreshold = 200; // Ignore small wobbles
-const movementBurstLimit = 20; // Require several fast motions
+  const now = Date.now();
 
-if (distance > distanceThreshold) {
-  moveBurst++;
-  if (moveBurst > movementBurstLimit) {
+  const dx = Math.abs(e.clientX - lastX);
+  const dy = Math.abs(e.clientY - lastY);
+  const distance = Math.sqrt(dx * dx + dy * dy);
+
+  const timeDiff = now - lastMoveTime;
+
+  // Only count bursts if movement is fast and far enough
+  if (distance > distanceThreshold && timeDiff < 200) {
+    moveBurst++;
+  } else {
+    moveBurst = Math.max(0, moveBurst - 1); // decay burst slowly
+  }
+
+  if (moveBurst >= movementBurstLimit && now - lastReactionTime > movementCooldown) {
     showFloatingDialogue(getRandomMessage("move"));
     moveBurst = 0;
+    lastReactionTime = now;
   }
-}
 
+  lastX = e.clientX;
+  lastY = e.clientY;
+  lastMoveTime = now;
+});
 
-    lastX = e.clientX;
-    lastY = e.clientY;
-  });
 }
