@@ -86,17 +86,17 @@ function setupMoveDetector() {
   let moveBurst = 0;
 
   document.addEventListener("mousemove", (e) => {
-    const dx = Math.abs(e.clientX - lastX);
-    const dy = Math.abs(e.clientY - lastY);
-    const distance = Math.sqrt(dx * dx + dy * dy);
+const distanceThreshold = 120; // Ignore small wobbles
+const movementBurstLimit = 12; // Require several fast motions
 
-    if (distance > 50) {
-      moveBurst++;
-      if (moveBurst > 8) {
-        showFloatingDialogue(getRandomMessage("move"));
-        moveBurst = 0;
-      }
-    }
+if (distance > distanceThreshold) {
+  moveBurst++;
+  if (moveBurst > movementBurstLimit) {
+    showFloatingDialogue(getRandomMessage("move"));
+    moveBurst = 0;
+  }
+}
+
 
     lastX = e.clientX;
     lastY = e.clientY;
